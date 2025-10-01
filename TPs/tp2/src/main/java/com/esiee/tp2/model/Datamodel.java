@@ -17,12 +17,33 @@ public class Datamodel {
 
 
     // Getters / Setters
-    private static Datamodel getInstance(){
+    public static Datamodel getInstance(){
         return instance;
     }
 
+    public List<Person> getPersons(){
+        return new ArrayList<>(persons.values());
+    }
 
+    public Person getPerson(Long id){
+        return persons.get(id);
+    }
 
+    public List<Civility> getCivilities(){
+        return new ArrayList<>(civilities.values());
+    }
+
+    public Civility getCivility(Long id){
+        return civilities.get(id);
+    }
+
+    public List<Function> getFunctions(){
+        return new ArrayList<>(functions.values());
+    }
+
+    public Function getFunction(Long id){
+        return functions.get(id);
+    }
 
 
 
