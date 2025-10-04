@@ -1,0 +1,98 @@
+/* ========== Global base ========== */
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background-color: #f5f6fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* ========== Main container ========== */
+.container {
+    background-color: #fff;
+    padding: 40px 60px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+/* ========== Titles ========== */
+h1, h2, h3 {
+    text-align: center;
+    color: #2f3640;
+    margin-bottom: 30px;
+}
+
+/* ========== Form inputs ========== */
+label {
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* ========== Buttons ========== */
+button {
+    width: 100%;
+    background-color: #273c75;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #40739e;
+}
+
+/* ========== Info / Feedback messages ========== */
+.info {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #718093;
+    text-align: center;
+}
+
+.error {
+    color: #e84118;
+    background-color: #f9d6d5;
+    border: 1px solid #e84118;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.success {
+    color: #44bd32;
+    background-color: #d5f9da;
+    border: 1px solid #44bd32;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.warning {
+    color: #e1b12c;
+    background-color: #fff5d6;
+    border: 1px solid #e1b12c;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 15px;
+}

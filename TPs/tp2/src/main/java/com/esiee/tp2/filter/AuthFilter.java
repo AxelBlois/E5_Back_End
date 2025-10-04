@@ -11,25 +11,26 @@ import java.io.IOException;
 public class AuthFilter implements Filter{
 
     @Override
-    public void init(FilterConfig )
-
+    public void init(FilterConfig filterConfig) throws ServletException{
+        System.out.println("Auth init");
+    }
 
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response,
-                            FilterChain chain) throws IOException, SecurityException {
+                            FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
         Object user = req.getSession().getAttribute("user");
 
-        if (user == null && !req.getRequestURI().contains("/login")) {
+        if (user == null &&
+            !req.getRequestURI().contains("/login") &&
+            !req.getRequestURI().contains("/css")) {
             res.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unautorized access");
             return;
         }
-
         chain.doFilter(request, response);
-
     }
 
 

@@ -6,7 +6,7 @@ import java.util.*;
 public class Datamodel {
 
     // Attributes
-    private static Datamodel instance = new  Datamodel();
+    private static Datamodel instance = null;
 
     private Map<Long, Person> persons = new HashMap<>();
     private Map<Long, Civility> civilities = new HashMap<>();
@@ -18,6 +18,10 @@ public class Datamodel {
 
     // Getters / Setters
     public static Datamodel getInstance(){
+        if (instance == null){
+            instance = new Datamodel();
+            instance.initData();
+        }
         return instance;
     }
 
@@ -45,6 +49,25 @@ public class Datamodel {
         return functions.get(id);
     }
 
+    public void initData(){
 
+        civilities.put(1L, new Civility(1L,"mr","Monsieur"));
+        civilities.put(2L, new Civility(2L,"mme","Madame"));
+
+        functions.put(1L, new Function(1L, "dev", "Développeur"));
+        functions.put(2L, new Function(2L, "pm", "Product Manaer"));
+
+        persons.put(1L, new Person(1L, "Rozan","Baptiste", "br@gmail.com", "0600000001", "rozanb", "1234"));
+        persons.put(2L, new Person(2L, "Chang", "Charlotte", "cc@mgail.com","0600000002", "changc", "0000"));
+
+    }
+
+    public static void main(String[] args){
+        Datamodel datamodel = getInstance();
+
+        for (Person p : datamodel.getPersons()){
+            System.out.println(p.getLogin() + " " + p.getPassword());
+        }
+    }
 
 }
