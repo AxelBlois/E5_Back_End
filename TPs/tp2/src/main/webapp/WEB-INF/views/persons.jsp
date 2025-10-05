@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="${styleUrl}">
 </head>
 <body>
+<%@ include file="/WEB-INF/views/components/navbar.jsp" %>
     <div class="container">
         <h2>Lists of Registered Users</h2>
         <table border="1" width="100%" cellpadding="8" style="border-collapse: collapse;">

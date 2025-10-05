@@ -20,7 +20,7 @@ public class PersonServlet extends HttpServlet {
         List<Person> persons = Datamodel.getInstance().getPersons();
 
         request.setAttribute("persons", persons);
-        request.getRequestDispatcher("/persons.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/persons.jsp").forward(request,response);
     }
 
 }

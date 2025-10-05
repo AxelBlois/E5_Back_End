@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
@@ -12,17 +13,21 @@ import java.io.IOException;
 public class LogoutServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
 
-        request.getSession().invalidate();
-        response.sendRedirect(request.getContextPath() + "/login.jsp");
+        HttpSession session = request.getSession(false);
+        if (session != null) session.invalidate();
+
+        response.sendRedirect(request.getContextPath() + "/login");
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        response.sendRedirect(request.getContextPath() + "/login.jsp");
+
+        doGet(request, response);
     }
+
 
 }

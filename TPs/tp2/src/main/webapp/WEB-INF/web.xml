@@ -6,10 +6,20 @@
 
     <display-name>TP2 Web App</display-name>
 
-    <!-- Mapping d'erreur 401 -->
+    <!-- Errors Mapping -->
     <error-page>
         <error-code>401</error-code>
-        <location>/error.jsp</location>
+        <location>/error</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error</location>
     </error-page>
 
 </web-app>

@@ -1,33 +1,98 @@
-/* ========== Global base ========== */
+/* =========================================================
+   🌐 GLOBAL BASE
+   ========================================================= */
 body {
     font-family: "Segoe UI", Roboto, sans-serif;
     background-color: #f5f6fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 0;
+    display: block;
 }
 
-/* ========== Main container ========== */
+/* =========================================================
+   🧭 NAVBAR
+   ========================================================= */
+.navbar {
+    width: 100vw; /* occupe toute la largeur visible */
+    background-color: #273c75;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.logout-form {
+    display: inline;
+}
+
+.logout-btn {
+    background-color: #e84118;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: #c23616;
+}
+
+/* =========================================================
+   🧱 MAIN CONTAINER
+   ========================================================= */
 .container {
     background-color: #fff;
     padding: 40px 60px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: min(90%, 800px); /* largeur max mais responsive */
+    margin: 140px auto; /* espace sous la navbar */
+    text-align: center;
+    box-sizing: border-box;
 }
 
-/* ========== Titles ========== */
+/* =========================================================
+   🏷️ TITLES
+   ========================================================= */
 h1, h2, h3 {
     text-align: center;
     color: #2f3640;
     margin-bottom: 30px;
 }
 
-/* ========== Form inputs ========== */
+/* =========================================================
+   ✏️ FORM INPUTS
+   ========================================================= */
 label {
     font-weight: 600;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
 }
 
 input[type="text"],
@@ -36,14 +101,15 @@ input[type="email"],
 input[type="number"] {
     width: 100%;
     padding: 10px;
-    margin-top: 6px;
     margin-bottom: 16px;
     border: 1px solid #dcdde1;
     border-radius: 6px;
     box-sizing: border-box;
 }
 
-/* ========== Buttons ========== */
+/* =========================================================
+   🔘 BUTTONS
+   ========================================================= */
 button {
     width: 100%;
     background-color: #273c75;
@@ -53,46 +119,69 @@ button {
     border-radius: 6px;
     font-size: 15px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 button:hover {
     background-color: #40739e;
 }
 
-/* ========== Info / Feedback messages ========== */
-.info {
-    margin-top: 20px;
-    font-size: 13px;
-    color: #718093;
+/* =========================================================
+   ℹ️ FEEDBACK MESSAGES
+   ========================================================= */
+.info, .error, .success, .warning {
+    padding: 10px;
+    border-radius: 6px;
     text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.info {
+    color: #718093;
+    background-color: #f0f3f6;
 }
 
 .error {
     color: #e84118;
     background-color: #f9d6d5;
     border: 1px solid #e84118;
-    padding: 8px;
-    border-radius: 6px;
-    text-align: center;
-    margin-bottom: 15px;
 }
 
 .success {
     color: #44bd32;
     background-color: #d5f9da;
     border: 1px solid #44bd32;
-    padding: 8px;
-    border-radius: 6px;
-    text-align: center;
-    margin-bottom: 15px;
 }
 
 .warning {
     color: #e1b12c;
     background-color: #fff5d6;
     border: 1px solid #e1b12c;
-    padding: 8px;
+}
+
+/* =========================================================
+   📊 TABLES
+   ========================================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
     border-radius: 6px;
-    text-align: center;
-    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #273c75;
+    color: white;
+}
+
+th, td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid #dcdde1;
+}
+
+tr:hover {
+    background-color: #f1f2f6;
 }
