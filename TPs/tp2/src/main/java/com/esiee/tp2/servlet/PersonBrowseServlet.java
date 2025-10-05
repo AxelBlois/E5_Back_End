@@ -11,8 +11,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/persons")
-public class PersonServlet extends HttpServlet {
+@WebServlet("/person_browse")
+public class PersonBrowseServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -20,7 +20,7 @@ public class PersonServlet extends HttpServlet {
         List<Person> persons = Datamodel.getInstance().getPersons();
 
         request.setAttribute("persons", persons);
-        request.getRequestDispatcher("/WEB-INF/views/persons.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/person_browse.jsp").forward(request,response);
     }
 
 }

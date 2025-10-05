@@ -185,3 +185,12 @@ th, td {
 tr:hover {
     background-color: #f1f2f6;
 }
+.link-details {
+    color: #273c75;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-details:hover {
+    text-decoration: underline;
+}

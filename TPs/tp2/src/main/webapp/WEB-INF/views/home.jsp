@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:url value="/persons" var="personsUrl"/>
+<c:url value="/person_browse" var="personsUrl"/>
 <c:url value="/logout" var="logoutUrl"/>
 
 <html>
