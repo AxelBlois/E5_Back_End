@@ -15,8 +15,7 @@ public class AuthFilter implements Filter{
             "/logout",
             "/css"
     );
-
-
+    
     @Override
     public void init(FilterConfig filterConfig) throws ServletException{
         System.out.println("Auth init");
