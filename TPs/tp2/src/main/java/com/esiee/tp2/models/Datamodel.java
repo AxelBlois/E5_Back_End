@@ -1,4 +1,4 @@
-package com.esiee.tp2.model;
+package com.esiee.tp2.models;
 
 import  com.esiee.tp2.domain.*;
 import java.util.*;

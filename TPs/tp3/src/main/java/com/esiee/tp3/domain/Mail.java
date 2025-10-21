@@ -1,15 +1,17 @@
 package com.esiee.tp3.domain;
 
-public class Mail extends Entity{
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonAppend;
 
-    String address;
+public class Mail extends Entity {
+
+    private String address;
+    private MailType type;
+
+    @JsonIgnore
+    private Person person;
 
     public Mail() {}
-
-    public Mail(Long id, String address) {
-        this.id = id;
-        this.address = address;
-    }
 
     public String getAddress() {
         return address;
@@ -18,4 +20,17 @@ public class Mail extends Entity{
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public Mail(Long id, String address) {
+        this.id = id;
+        this.address = address;
+    }
+
+    public MailType getType() {return type;}
+
+    public void setType(MailType type) {this.type = type;}
+
+    public Person getPerson() {return person;}
+
+    public void setPerson(Person person) {this.person = person;}
 }

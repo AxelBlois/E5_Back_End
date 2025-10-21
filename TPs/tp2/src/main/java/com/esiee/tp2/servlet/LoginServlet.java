@@ -1,7 +1,7 @@
 package com.esiee.tp2.servlet;
 
 import com.esiee.tp2.domain.Person;
-import com.esiee.tp2.model.Datamodel;
+import com.esiee.tp2.models.Datamodel;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
