@@ -1,22 +1,11 @@
 package com.esiee.tp3.domain;
 
-public class Person {
-    private Long id;
-    private String lastname;
-    private String firstname;
-    private String mail;
-    private String mobilePhone;
-    private String login;
-    private String password;
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+public class Person extends Entity {
+    String lastname;
+    String firstname;
+    String mobilePhone;
+    String login;
+    String password;
 
     public String getLastname() {
         return lastname;
@@ -32,14 +21,6 @@ public class Person {
 
     public void setFirstname(String firstname) {
         this.firstname = firstname;
-    }
-
-    public String getMail() {
-        return mail;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail;
     }
 
     public String getMobilePhone() {

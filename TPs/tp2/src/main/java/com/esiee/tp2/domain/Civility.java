@@ -9,7 +9,8 @@ public class Civility {
 
 
     // Constructors
-    public Civility() { }
+    public Civility() {}
+
     public Civility(Long id, String code, String label) {
         this.id = id;
         this.code = code;
@@ -17,13 +18,16 @@ public class Civility {
     }
 
     // Getters / Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    public Long getId() {return id;}
 
-    public String getCode() { return code; }
-    public void setCode(String code) { this.code = code; }
+    public void setId(Long id) {this.id = id;}
 
-    public String getLabel() { return label; }
-    public void setLabel(String label) { this.label = label; }
+    public String getCode() {return code;}
+
+    public void setCode(String code) {this.code = code;}
+
+    public String getLabel() {return label;}
+
+    public void setLabel(String label) {this.label = label;}
 
 }

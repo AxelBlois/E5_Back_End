@@ -1,4 +1,3 @@
 package com.esiee.tp3.domain;
 
-public class Civility {
-}
+public class Civility extends ReferentialEntity {}
